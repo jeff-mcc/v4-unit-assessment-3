@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import React, {Component} from 'react'
 import './App.css';
+import data from './data'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  constructor(){
+    super()
+    const bookData = data;
+    this.state = {
+      books: [],
+      shelf: []
+    }
+  }
+
+  addToShelf(){
+    console.log('add to shelf')
+  }
+
+  clearShelf(){
+    console.log('clear shelf')
+  }
+
+  filterBooks(){
+    console.log('filter books')
+  }
+
+  reset(){
+    console.log('reset')
+  }
+
+  render(){
+    return (
+      <div className="App">
+        <h1>Hello</h1>
+      </div>
+    );
+  }
 }
 
 export default App;
