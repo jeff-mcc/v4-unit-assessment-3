@@ -79,6 +79,14 @@ header{
   border-left: black 2px solid;
 }
 
+/* .searchitems:hover{
+  background-color: cornflowerblue;
+} */
+
+.btn:hover{
+  background-color: cornflowerblue;
+}
+
 /* #shelfdisplay{
   width: 20vw;
 } */

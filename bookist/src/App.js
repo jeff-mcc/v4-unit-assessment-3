@@ -31,8 +31,11 @@ class App extends Component{
 
   filterBooks = (input) => {
     // console.log('filter books')
+    let lowerCaseInput = input.toLowerCase();
     let filteredBooks = this.state.books.filter(e=>{
-      if(e.title.includes(input) || e.author.includes(input)){
+      let lowerCaseTitle = e.title.toLowerCase();
+      let lowerCaseAuthor = e.author.toLowerCase();
+      if(lowerCaseTitle.includes(lowerCaseInput) || lowerCaseAuthor.includes(lowerCaseInput)){
         return true
       } else{
         return false
@@ -51,7 +54,7 @@ class App extends Component{
     return (
       <div className="App">
         <Header />
-        <SearchBar filterBooks={this.filterBooks} reset={this.reset}/>
+        <SearchBar filterBooks={this.filterBooks} reset={this.reset} books={this.state.books} origArr={this.state.origArr}/>
         <div className='maindisplay'>
           <BookList books={this.state.books} addToShelf={this.addToShelf}/>
           <Shelf shelf={this.state.shelf} clearShelf={this.clearShelf}/>

@@ -31,8 +31,8 @@ class SearchBar extends Component{
             // reset: function
             <div className="searchbar">
                 <input className="searchitems" value={this.state.userInput} onChange={e=>this.handleChange(e.target.value)}></input>
-                <button className="searchitems" onClick={()=>this.handleClick()}>search</button>
-                <button className="searchitems" onClick={()=>this.handleClear()}>clear search</button>
+                <button className="searchitems btn" onClick={()=>this.handleClick()}>search</button>
+                <button className="searchitems btn" onClick={()=>this.handleClear()} disabled={(this.state.userInput==='' && this.props.books===this.props.origArr)?true:false}>clear search</button>
             </div>
         )
     }
