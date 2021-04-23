@@ -26,8 +26,8 @@ header{
   color: teal;
   /* margin-top: 0; */
   box-shadow: 0px 5px 20px 0px lightgrey;
-  height: 4em;
-  margin-bottom: 20px;
+  height: 8vh;
+  margin-bottom: 2vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,6 +44,7 @@ header{
 
 .mappedbooks{
   width: 80vw;
+  min-height: 90vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -57,6 +58,12 @@ header{
   /* justify-content:space-between; */
   align-items: center;
   align-content: space-between;
+}
+
+.shelf{
+  width: 20vw;
+  min-height: 90vh;
+  border-left: black 2px solid;
 }
 
 /* #shelfdisplay{

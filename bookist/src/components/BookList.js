@@ -4,19 +4,19 @@ function BookList(props){
     //Booklist has two props
     // books: array,
     // addToShelf: function
-    console.log(props)
+    // console.log(props)
     const compWidth = '200px';
     let mappedBooks = props.books.map(e=>{
         return(
-            <div class="bookdisplay">
+            <div className="bookdisplay">
                 <img src={e.img} alt={e.title} style={{width: compWidth, height:  "auto"}} onClick={()=>props.addToShelf(e.title)}/>
-                <h4 style={{width: compWidth, marginBottom: 0}}>{e.title}</h4>
-                <p style={{width: compWidth, marginTop: 0}}>By: {e.author}</p>
+                <h4 style={{width: compWidth, marginBottom: 0, marginTop: "8px"}}>{e.title}</h4>
+                <p style={{width: compWidth, marginTop: 0, marginBottom: "25px"}}>By: {e.author}</p>
             </div>
         )
     })
     return(
-        <div class="mappedbooks">
+        <div className="mappedbooks">
             {mappedBooks}
         </div>
     )

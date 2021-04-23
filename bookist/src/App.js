@@ -15,12 +15,16 @@ class App extends Component{
     }
   }
 
-  addToShelf = () => {
-    console.log('add to shelf')
+  addToShelf = (newTitle) => {
+    // console.log('add to shelf')
+    if(!this.state.shelf.includes(newTitle)){
+      let updateShelf = [...this.state.shelf,newTitle]
+      this.setState({shelf: updateShelf})
+    }
   }
 
-  clearShelf(){
-    console.log('clear shelf')
+  clearShelf = () =>{
+    this.setState({shelf: []})
   }
 
   filterBooks(){
@@ -36,7 +40,7 @@ class App extends Component{
     return (
       <div className="App">
         <Header />
-        <div class='maindisplay'>
+        <div className='maindisplay'>
           <BookList books={this.state.books} addToShelf={this.addToShelf}/>
           <Shelf shelf={this.state.shelf} clearShelf={this.clearShelf}/>
         </div>
