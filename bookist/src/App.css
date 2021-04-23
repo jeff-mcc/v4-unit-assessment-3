@@ -42,9 +42,22 @@ header{
   display: flex;
 }
 
+.searchbar{
+  height: 4vh;
+  /* min-width: 20vw; */
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.searchitems{
+  margin: 0 1vw;
+}
+
 .mappedbooks{
   width: 80vw;
-  min-height: 90vh;
+  min-height: 84vh;
+  margin-top: 2vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -62,7 +75,7 @@ header{
 
 .shelf{
   width: 20vw;
-  min-height: 90vh;
+  min-height: 86vh;
   border-left: black 2px solid;
 }
 
