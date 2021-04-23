@@ -18,9 +18,9 @@ class SearchBar extends Component{
         this.props.filterBooks(this.state.userInput)
     }
 
-    handleClear = (input) => {
+    handleClear = () => {
         // console.log('handle clear')
-        this.setState({userInput: input})
+        this.setState({userInput: ''})
         this.props.reset()
     }
 
